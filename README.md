@@ -1,6 +1,6 @@
 # ArchivistBot
 
-This is a tool that uses OpenAI's gpt-4-vision-preview model to facilitate the archiving of historical documents on the Collective Access database. Users provide photographs of historical documents and brief descriptions and this program creates the corresponding digital record with metadata(e.g. date, content scope and summary, condition).
+This is a tool that uses OpenAI's chatbot with vision to facilitate the archiving of historical documents on the Collective Access database. Users provide photographs of historical documents and brief descriptions and this program creates the corresponding digital record with metadata(e.g. date, content scope and summary, condition).
 
 ## Installation & Set-up
 
@@ -10,6 +10,8 @@ There are three steps to setting up this tool:
 3. Adding your CollectiveAccess login credentials to ArchivistBot
 
 You will need to go into the `archiveGPT` and `bots` folders to add variables as part of the initial configuration. After initial setup, you will be interacting with the `Stage`, `Archive`, and `Archivist.ipynb` files alone*. The rest simply house function definitions and variable names. 
+
+*The `Useful Functions` folder contains additional files which may be useful for certain tasks, like automating set creation on Collective Access, but those 
 
 ### Software Installation
 
@@ -57,16 +59,47 @@ If you are not accessing the Madison Historical Society's CollectiveAccess backe
 
 ## Usage
 
-The program is used at the `Stage` folder and the `Archivist.ipynb` notebook. You will be interacting with files alone.
+The program is used at the `Archivist.ipynb` notebook and the `Stage` folder. 
+* The `Archivist.ipynb` will call and execute functions
+* The `Stage` folder will hold the files created and handled during usage sessions
 
 There are three main steps in the usage of `ArchivistBot`:
 1. Acquire document images
 2. Process the images
 3. Upload the products of step (2) to CollectiveAccess
 
- 
-The first step requires you take photographs of the document you want to catalog and transfer these to the `Stage/Input` file. 
+These will be illustrated with an example. 
 
-These will be illustrated with an example: 
+### Step 1: Acquire document images
+
+Start by getting pictures of your historical documents to your computer.
+
+#### 1.1 Take the Pictures
+
+You must first take pictures of you historical documents and transfer these to your computer. These must be JPEG files. There is no 'right' way to take the picture, but follow the rule that any you take should be clear and complete enough for anyone who sees them to write an archival entry like the one you want. 
+
+#### 1.2 Transfer them to your Computer
+
+Transfer the images to your computer using your preferred method but note that your choice matters. For instance, emailing large images is slow. Personally, WhatsApp'ing myself the photos and accessing the chat from my browser was a quick and reliable method.
+
+Store the files where you will not forget them.
+
+
+### Step 2: Process Images
+
+Then, one document at a time, you will generate and control the quality of accession records. You will be executing the cells in the `"Process Images"` section of the `Archivist.ipynb` notebook.
+
+#### 2.1: Stage the Files & Provide Additional Information
+
+Store the images of the document under consideration in the `Stage/Inputs` folder. The ArchivistBot will always look in that folder for input.
+
+Then, in the notebook, under `"Make Entries"`, set the `user_msg` variable to a brief description of the item, including the physical dimensions.
+
+#### 2.2: Generate a Record
+
+
+
+
+### Step 3: Upload to Collective Access
 
 ## Developer Guide
