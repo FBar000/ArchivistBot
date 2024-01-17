@@ -13,8 +13,7 @@ class CTCoSession(webdriver.Chrome):
         self.__wait_until(cfg.LOGIN_XPATHS["username"]).send_keys(cfg.CREDENTIALS["username"])
         self.__wait_until(cfg.LOGIN_XPATHS["password"]).send_keys(cfg.CREDENTIALS["password"])
         self.__wait_until(cfg.LOGIN_XPATHS["submit"]).click()
-
-
+        
     def create_object(self, doc):
         self.get(cfg.URLS["NEWDOC_URL"])
         self.__write_basic_info(doc)
