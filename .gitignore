@@ -7,20 +7,8 @@ __pycache__/
 Irrelevant
 
 # Personal Content
-Archive/Input/*
-Archive/JSON/*
-Archive/Output/*
-
-Stage/Input/*
-Stage/Output/*
-Stage/JSON_Output/*
-
 */config.py
 CTCoConfigs.py
-
-# Files
-TODO LIST.txt
-Handles.txt
 
 # Credentials / API Auth
 configs.py
