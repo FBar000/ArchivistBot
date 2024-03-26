@@ -18,10 +18,6 @@ Stage/JSON_Output/*
 */config.py
 CTCoConfigs.py
 
-# Files
-TODO LIST.txt
-Handles.txt
-
 # Credentials / API Auth
 configs.py
 
