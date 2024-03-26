@@ -7,14 +7,6 @@ __pycache__/
 Irrelevant
 
 # Personal Content
-Archive/Input/*
-Archive/Output/*
-Archive/JSON/*
-
-Stage/Input/*
-Stage/Output/*
-Stage/JSON_Output/*
-
 */config.py
 CTCoConfigs.py
 
