@@ -66,7 +66,7 @@ The program is used at the `Archivist.ipynb` notebook and the `Stage` folder.
 There are three main steps in the usage of `ArchivistBot`:
 1. Acquire document images
 2. Process the images
-3. Upload the products of step (2) to CollectiveAccess
+3. Upload the products of the previous step to CollectiveAccess
 
 These will be illustrated with an example. 
 
