@@ -133,7 +133,7 @@ To upload the JSONs to Collective Access, run the two cells under the header "Up
 
 The first cell will create a list variable with the paths to the files. The second cell will open a selenium websession and iterate over the list, creating an object according to each set of instructions in the JSONs. 
 
-## Step 5: Archive JSONs
+### Step 5: Archive JSONs
 
 Run the final cell to move the processed JSON instructions from the `Stage` folder to the `Archive` folder, where you may access them later.
 
