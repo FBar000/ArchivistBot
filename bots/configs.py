@@ -6,9 +6,9 @@ CREDENTIALS = {
 # CTCo Variables
 
 URLS= {
-    "LOGIN_URL":  r"https://madison.ctcollections.org/index.php/system/auth/login",
-    "NEWDOC_URL": r'https://madison.ctcollections.org/editor/objects/ObjectEditor/Edit/type_id/27',
-    "SEARCH_BUILDER": r'https://madison.ctcollections.org/find/SearchObjectsBuilder/Index/reset/save'
+    "LOGIN_URL":  r"",
+    "NEWDOC_URL": r'',
+    "SEARCH_BUILDER": r''
 }
 
 
