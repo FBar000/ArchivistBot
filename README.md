@@ -20,13 +20,13 @@ As of January 2024, this tool requires an IDE (e.g. VS Code) and Jupyter Noteboo
 Once that software is installed, install this tool via
 
 ```bash
-$ git clone https://github.com/FBar000/ArchivistBot.git
+git clone https://github.com/FBar000/ArchivistBot.git
 ```
 
 Then install dependencies in the project's virtual environment: 
 
 ```bash
-$ pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 ### API Setup
@@ -66,7 +66,7 @@ The program is used at the `Archivist.ipynb` notebook and the `Stage` folder.
 There are three main steps in the usage of `ArchivistBot`:
 1. Acquire document images
 2. Process the images
-3. Upload the products of step (2) to CollectiveAccess
+3. Upload the products of the previous step to CollectiveAccess
 
 These will be illustrated with an example. 
 
@@ -115,13 +115,27 @@ TITLE
 ...
 ```
 
-#### Step 2.4: Cleanup
+#### Step 2.4: Save and Cleanup
 
 Run the next cell to 
 1. Rename the images and the corrected draft file according to the IDNO you provided, for later reference
-2. Move the renamed images and draft to the `Archive` folder (`Archive/Inputs` and `Archive/Outputs`)
-3. Create a JSON file from the corrected draft
+2. Create a JSON file from the corrected draft
+3. Move the renamed images and draft to the `Archive` folder (`Archive/Inputs` and `Archive/Outputs`)
 
-### Step 3: Upload to Collective Access
+### Step 3: Repeat
+
+Repeat steps 1) and 2) for however many items you wish to upload at once.
+
+
+### Step 4: Upload to Collective Access
+
+To upload the JSONs to Collective Access, run the two cells under the header "Upload to CTCo"
+
+The first cell will create a list variable with the paths to the files. The second cell will open a selenium websession and iterate over the list, creating an object according to each set of instructions in the JSONs. 
+
+### Step 5: Archive JSONs
+
+Run the final cell to move the processed JSON instructions from the `Stage` folder to the `Archive` folder, where you may access them later.
+
 
 ## Developer Guide
