@@ -1,6 +1,6 @@
 import os
 import shutil
-from config import *
+from .config import *
 
 def archive_inputs():
     destination_folder = IARCHIVE_FOLDER
