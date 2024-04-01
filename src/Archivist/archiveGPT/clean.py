@@ -1,20 +1,20 @@
 import os
 import shutil
-import archiveGPT.config as cfg
+from config import *
 
 def archive_inputs():
-    destination_folder = cfg.IARCHIVE_FOLDER
-    source_folder = cfg.INPUT_FOLDER
+    destination_folder = IARCHIVE_FOLDER
+    source_folder = INPUT_FOLDER
     move_files(source_folder, destination_folder)
 
 def archive_outputs():
-    destination_folder = cfg.OARCHIVE_FOLDER
-    source_folder = cfg.OUTPUT_FOLDER
+    destination_folder = OARCHIVE_FOLDER
+    source_folder = OUTPUT_FOLDER
     move_files(source_folder, destination_folder)
 
 def archive_jsons():
-    destination_folder = cfg.JARCHIVE_FOLDER
-    source_folder = cfg.JSON_OUTPUT
+    destination_folder = JARCHIVE_FOLDER
+    source_folder = JSON_OUTPUT
     move_files(source_folder, destination_folder)
 
 
