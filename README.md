@@ -33,7 +33,7 @@ $ pip install -r requirements.txt
 
 To use the OpenAI API, you must first create an account on OpenAI, fund it, and register an API key. Follow their instructions to do this.
 
-Once you have the API key, paste it in the `API_KEY` variable in `archiveGPT/config.py`.
+Once you have the API key, paste it in the `API_KEY` variable in a new file `archiveGPT/API_key.py`.
 
 ```python
 API_KEY = r'' ## Include your API Key
@@ -43,7 +43,7 @@ At this point, you have all you need to generate archival entries, but note that
 
 ### CollectiveAccess Interface Set-up
 
-To allow `ArchivistBot` to access CollectiveAccess, add the username and password that you use to log onto the database into the `CREDENTIALS` dictionary in the `configs.py` file in the `bots` package:
+To allow `ArchivistBot` to access CollectiveAccess, add the username and password that you use to log onto the database into the `CREDENTIALS` dictionary in a new file `bots/creds.py`:
 
 ```python
 CREDENTIALS = {
