@@ -7,12 +7,6 @@ __pycache__/
 Irrelevant
 
 
-*/config.py
-CTCoConfigs.py
-
-# Credentials / API Auth
-configs.py
-
 # C extensions
 *.so
 
