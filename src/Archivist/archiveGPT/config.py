@@ -1,5 +1,3 @@
-API_KEY = r'' ## Include your API Key
-
 
 
 PRIMING_INSTRUCTION_PATH = r'Instructions'

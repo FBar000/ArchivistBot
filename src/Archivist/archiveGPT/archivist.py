@@ -8,7 +8,7 @@ def createEntryDraft(user_msg:str="Make an entry.", GPT_primer:str=None) -> str:
 
 
 
-def saveEntryDraft(file_path) -> str:
+def saveEntryDraft(file_path:str) -> str:
     directory = cfg.JSON_OUTPUT
     old_name = os.path.splitext(os.path.split(file_path)[-1])[0]
     e_json = fromFile(file_path)
