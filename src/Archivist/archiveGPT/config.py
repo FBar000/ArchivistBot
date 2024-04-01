@@ -1,6 +1,5 @@
 
-
-PRIMING_INSTRUCTION_PATH = r'Instructions'
+PRIMING_INSTRUCTION_PATH = r'ArchivistBot\\src\\Archivist\\archiveGPT\\Instructions'
 
 
 
