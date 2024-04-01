@@ -33,10 +33,12 @@ def move_files(source_folder, destination_folder):
 
     # Move each file to the destination folder
     for file in files:
-        source_path = os.path.join(source_folder, file)
-        destination_path = os.path.join(destination_folder, file)
+        # skip .gitignore files
+        if not file.endswith(".gitignore"):
+            source_path = os.path.join(source_folder, file)
+            destination_path = os.path.join(destination_folder, file)
 
-        # Move the file
-        shutil.move(source_path, destination_path)
+            # Move the file
+            shutil.move(source_path, destination_path)
 
-        print(f"Moved: {source_path} -> {destination_path}")
+            print(f"Moved: {source_path} -> {destination_path}")
