@@ -30,7 +30,7 @@ def getPhotos() -> list:
 
 
 def get_images_path(folder_path):
-    return [os.path.join(folder_path, i) for i in os.listdir(folder_path)]
+    return [os.path.join(folder_path, i) for i in os.listdir(folder_path) if i.endswith('.png')]
 
 
 # Encode many images
