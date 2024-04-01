@@ -6,12 +6,6 @@ __pycache__/
 # Irrelevant code
 Irrelevant
 
-# Personal Content
-*/config.py
-CTCoConfigs.py
-
-# Credentials / API Auth
-configs.py
 
 # C extensions
 *.so

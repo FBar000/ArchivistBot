@@ -4,11 +4,12 @@ import os
 import re
 
 from openai import OpenAI
-import archiveGPT.config as cfg
+from .config import *
+from .API_key import *
 
 
 def getPrimer(priming_folder: str = None) -> list:
-    src = cfg.PRIMING_INSTRUCTION_PATH if priming_folder == None else priming_folder
+    src = PRIMING_INSTRUCTION_PATH if priming_folder == None else priming_folder
     res = ""
     for filename in os.listdir(src):
         file_path = os.path.join(src, filename)
@@ -22,18 +23,18 @@ def getPrimer(priming_folder: str = None) -> list:
     }
 
 
-def getPhotos() -> list():
-    paths = get_images_path(cfg.INPUT_FOLDER)
+def getPhotos() -> list:
+    paths = get_images_path(INPUT_FOLDER)
     encd_imgs = encode_images(paths)
     return encd_imgs
 
 
 def get_images_path(folder_path):
-    return [os.path.join(folder_path, i) for i in os.listdir(folder_path)]
+    return [os.path.join(folder_path, i) for i in os.listdir(folder_path) if i.endswith('.png')]
 
 
 # Encode many images
-def encode_images(image_paths) -> list():
+def encode_images(image_paths) -> list:
   encoded_imgs = list()
   for image_path in image_paths:
     encoded_imgs.append(__encode_image(image_path))
@@ -73,7 +74,7 @@ def __image_upload(img_url):
 
 
 def mkRecords(msg: str) -> OpenAI:
-    client = OpenAI(api_key=cfg.API_KEY)
+    client = OpenAI(api_key=API_KEY)
     response = client.chat.completions.create(
     model="gpt-4-vision-preview",
     messages=msg,
@@ -120,7 +121,7 @@ def fromFile(file_path: str) -> dict:
 
 
 def toFile(entry: dict, count=0):
-    file_path = os.path.join(cfg.OUTPUT_FOLDER, f"{count}.txt")
+    file_path = os.path.join(OUTPUT_FOLDER, f"{count}.txt")
     # Open a file for writing or create it if it doesn't exist
     with open(file_path, 'w') as file:
         for key, value in entry.items():

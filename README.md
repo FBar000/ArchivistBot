@@ -5,7 +5,7 @@ This is a tool that uses OpenAI's chatbot with vision to facilitate the archivin
 ## Installation & Set-up
 
 There are three steps to setting up this tool:
-1. Instal the necessary software 
+1. Install the necessary software 
 2. [Create an OpenAI account, register an  API key](https://platform.openai.com/docs/quickstart?context=python), and add it to ArchivistBot
 3. Add your CollectiveAccess login credentials to ArchivistBot
 
@@ -33,7 +33,7 @@ pip install -r requirements.txt
 
 [To use the OpenAI API, you must first create an account on OpenAI, fund it, and register an API key.](https://platform.openai.com/docs/quickstart?context=python) 
 
-Once you have the API key, paste it in the `API_KEY` variable in `archiveGPT/config.py`.
+Once you have the API key, paste it in the `API_KEY` variable in a new file `archiveGPT/API_key.py`.
 
 ```python
 API_KEY = r'' ## Include your API Key
@@ -48,7 +48,7 @@ As of March 2024, this program uses [Selenium](https://selenium-python.readthedo
 
 ### CollectiveAccess Credentials Set-up
 
-To allow `ArchivistBot` to access CollectiveAccess, add the username and password that you use to log onto the database into the `CREDENTIALS` dictionary in the `configs.py` file in the `bots` package:
+To allow `ArchivistBot` to access CollectiveAccess, add the username and password that you use to log onto the database into the `CREDENTIALS` dictionary in a new file `bots/creds.py`:
 
 ```python
 CREDENTIALS = {

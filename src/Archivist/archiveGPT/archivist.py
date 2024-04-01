@@ -1,5 +1,6 @@
 import os
-from archiveGPT.utils import * 
+from .utils import * 
+
 
 
 def createEntryDraft(user_msg:str="Make an entry.", GPT_primer:str=None) -> str:
@@ -8,15 +9,15 @@ def createEntryDraft(user_msg:str="Make an entry.", GPT_primer:str=None) -> str:
 
 
 
-def saveEntryDraft(file_path) -> str:
-    directory = cfg.JSON_OUTPUT
+def saveEntryDraft(file_path:str) -> str:
+    directory = JSON_OUTPUT
     old_name = os.path.splitext(os.path.split(file_path)[-1])[0]
     e_json = fromFile(file_path)
     if "IDNO" not in e_json.keys():
         raise KeyError("Add IDNO to draft!")
     new_name = e_json["IDNO"].replace(".", ",")    
-    rename_images(cfg.INPUT_FOLDER, new_name)
-    rename_file(cfg.OUTPUT_FOLDER, old_name, new_name)
+    rename_images(INPUT_FOLDER, new_name)
+    rename_file(OUTPUT_FOLDER, old_name, new_name)
     file_name = os.path.join(directory, f"{new_name}.json")
     # create dir if nonexistent
     if not os.path.exists(directory):
