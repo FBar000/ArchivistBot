@@ -5,7 +5,7 @@ This is a tool that uses OpenAI's chatbot with vision to facilitate the archivin
 ## Installation & Set-up
 
 There are three steps to setting up this tool:
-1. Instal the necessary software 
+1. Install the necessary software 
 2. [Create an OpenAI account, register an  API key](https://platform.openai.com/docs/quickstart?context=python), and add it to ArchivistBot
 3. Add your CollectiveAccess login credentials to ArchivistBot
 
