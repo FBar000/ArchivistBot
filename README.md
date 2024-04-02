@@ -9,7 +9,8 @@ There are three steps to setting up this tool:
 2. [Create an OpenAI account, register an  API key](https://platform.openai.com/docs/quickstart?context=python), and add it to ArchivistBot
 3. Add your CollectiveAccess login credentials to ArchivistBot
 
-You will need to go into the `archiveGPT` and `bots` folders to add variables as part of the initial configuration. After initial setup, you will be interacting with the `Stage`, `Archive`, and `Archivist.ipynb` files alone*. The rest simply house function definitions and variable names. 
+All the files you need are in the `src` folder. For the initial configuration, you need to add files to the `Archivist/archiveGPT` and `Uploader/bots` folders. After initial setup, you will be interacting with the `Materials/Stage` and `Materials/Archive` directories and the `Archivist.ipynb` notebook. 
+
 
 ### Installation
 
@@ -56,12 +57,12 @@ CREDENTIALS = {
 ```
 
 
-(I do not know if all CollectiveAccess pages are structured identically. In the case that they aren't, you will need to modify the XML paths specified in `configs.py` of the bots module.)
+(CollectiveAccess may not all be structured identically. In the case that they aren't, you will also need to modify the XML paths specified in `configs.py` of the bots module. These tell the browser robot what page elements to interact with.)
 
 
 ## Usage
 
-Users interact with the `Archivist.ipynb` notebook and the `Stage` folder. 
+Users interact with the `Archivist.ipynb` notebook and the `Materials/Stage` folder. 
 * The `Archivist.ipynb` is the command center that coordinates all the functions
 * The `Stage` folder holds the files created and handled during sessions
 
@@ -136,6 +137,3 @@ The first cell will create a list variable with the paths to the files. The seco
 ### Step 4: Archive JSONs
 
 Run the final cell to move the processed JSON instructions from the `Stage` folder to the `Archive` folder, where you may access them later.
-
-
-## Developer Guide
