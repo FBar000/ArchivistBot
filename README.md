@@ -2,6 +2,8 @@
 
 This is a tool that uses OpenAI's chatbot with vision to facilitate the archiving of historical documents on a [Collective Access](https://www.collectiveaccess.org/) database. Users provide photographs and brief descriptions of historical documents and this program creates the corresponding digital record (e.g. date, content scope and summary, condition).
 
+Be sure to read the [dev-README.md](dev-README.md) if you intend to improve this project.
+
 ## Installation & Set-up
 
 There are three steps to setting up this tool:
