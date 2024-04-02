@@ -11,8 +11,6 @@ There are three steps to setting up this tool:
 
 You will need to go into the `archiveGPT` and `bots` folders to add variables as part of the initial configuration. After initial setup, you will be interacting with the `Stage`, `Archive`, and `Archivist.ipynb` files alone*. The rest simply house function definitions and variable names. 
 
-*The `Useful Functions` folder contains additional files which may be useful for certain tasks, like automating set creation on Collective Access.
-
 ### Installation
 
 As of January 2024, this tool requires an IDE (e.g. [VS Code](https://code.visualstudio.com/)) and [Jupyter Notebook](https://code.visualstudio.com/docs/datascience/jupyter-notebooks). Installation instructions can be found on those webpages.
