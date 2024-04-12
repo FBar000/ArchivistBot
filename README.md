@@ -89,8 +89,6 @@ Transfer the images to your computer using your preferred method. Your choice ma
 Store the files where you will not forget them.
 
 
-![Demonstrating file location](https://github.com/FBar000/ArchivistBot/blob/add-gifs/gifs/Loading-Inputs.gif)
-
 ### Step 2: Process Images
 
 Next, one document at a time, you will generate and control the quality of accession records. You will be executing the cells in the `"Process Images"` section of the `Archivist.ipynb` notebook. Iterate for each document: 
@@ -98,6 +96,10 @@ Next, one document at a time, you will generate and control the quality of acces
 #### 2.1: Stage the Files & Provide Additional Information
 
 Store the images of the document under consideration in the `Stage/Inputs` folder. The ArchivistBot will always look in that folder for input.
+
+
+![Demonstrating file location](https://github.com/FBar000/ArchivistBot/blob/add-gifs/gifs/Loading-Inputs.gif)
+
 
 In the notebook, under `"Make Entries"`, set the `user_msg` variable to a brief description of the item, including the physical dimensions. Remember to execute the cell once your message is complete to store it to memory.
 
@@ -123,6 +125,11 @@ Book - "Journey to the Center of the Earth"
 
 ...[etc.]
 ```
+
+Here is a demonstration of steps 2.1 through 2.2:
+
+![Demonstration of draft generation](https://github.com/FBar000/ArchivistBot/blob/add-gifs/gifs/Processing-Inputs.gif)
+
 
 #### Step 2.4: Save and Cleanup
 
