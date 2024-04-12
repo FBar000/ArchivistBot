@@ -89,6 +89,8 @@ Transfer the images to your computer using your preferred method. Your choice ma
 Store the files where you will not forget them.
 
 
+![Demonstrating file location](https://github.com/FBar000/ArchivistBot/blob/add-gifs/gifs/Loading-Inputs.gif)
+
 ### Step 2: Process Images
 
 Next, one document at a time, you will generate and control the quality of accession records. You will be executing the cells in the `"Process Images"` section of the `Archivist.ipynb` notebook. Iterate for each document: 
