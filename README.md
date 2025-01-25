@@ -97,7 +97,7 @@ Next, one document at a time, you will generate and control the quality of acces
 
 Store the images of the document under consideration in the `Stage/Inputs` folder. The ArchivistBot will always look in that folder for input.
 
-In the gif, I demonstrate the proper location of a picture of some calculations named `calculations.jpg`
+In the gif, I demonstrate the proper location of a picture of some calculations named `Calculations.jpg`
 
 
 ![Demonstrating file location](https://github.com/FBar000/ArchivistBot/blob/main/gifs/Loading-Inputs.gif)
