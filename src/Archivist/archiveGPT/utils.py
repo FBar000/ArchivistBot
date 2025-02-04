@@ -12,7 +12,7 @@ from .API_key import *
 def mkRecords(msg: str) -> OpenAI:
     client = OpenAI(api_key=API_KEY)
     response = client.chat.completions.create(
-    model="gpt-4-vision-preview",
+    model="gpt-4o",
     messages=msg,
     max_tokens=500,
     )
