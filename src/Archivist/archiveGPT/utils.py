@@ -8,6 +8,18 @@ from .config import *
 from .API_key import *
 
 
+# Query the API
+def mkRecords(msg: str) -> OpenAI:
+    client = OpenAI(api_key=API_KEY)
+    response = client.chat.completions.create(
+    model="gpt-4-vision-preview",
+    messages=msg,
+    max_tokens=500,
+    )
+    return response
+
+
+
 def getPrimer(priming_folder: str = None) -> list:
     src = PRIMING_INSTRUCTION_PATH if priming_folder == None else priming_folder
     res = ""
@@ -70,17 +82,6 @@ def __image_upload(img_url):
           "image_url": {
             "url": img_url
           }}
-
-
-
-def mkRecords(msg: str) -> OpenAI:
-    client = OpenAI(api_key=API_KEY)
-    response = client.chat.completions.create(
-    model="gpt-4-vision-preview",
-    messages=msg,
-    max_tokens=500,
-    )
-    return response
 
 
 
