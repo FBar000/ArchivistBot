@@ -34,7 +34,7 @@ pip install -r requirements.txt
 
 [To use the OpenAI API, you must first create an account on OpenAI, fund it, and register an API key.](https://platform.openai.com/docs/quickstart?context=python) 
 
-Once you have the API key, paste it in the `API_KEY` variable in a new file `archiveGPT/API_key.py`.
+Once you have the API key, paste it in the `API_KEY` variable in a new file `src/Archivist/archiveGPT/API_key.py`.
 
 ```python
 API_KEY = r'' ## Include your API Key
